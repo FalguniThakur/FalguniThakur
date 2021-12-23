@@ -1,0 +1,21 @@
+node{
+ stage('Git Checkout'){
+    git 'https://github.com/javahometech/my-app'  
+ }
+
+ stage('Build Docker Imager'){
+   sh 'sudo docker build -t anubhav01jain/my-app:2.0.0 .'
+ }
+  stage('Push to Docker Hub'){
+ 
+     withCredentials([string(credentialsId: 'github-pwd', variable: 'dockerHubPwd')]) {
+        sh "docker login -u anubhav01jain -p ${dockerHubPwd}"
+     }
+     sh 'docker push anubhav01jain/my-app:2.0.0'
+ }
+
+}
+
+
+
+
