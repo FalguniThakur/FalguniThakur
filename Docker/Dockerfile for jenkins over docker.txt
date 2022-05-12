@@ -24,7 +24,7 @@ RUN apt-get update
 RUN apt-get install apache2 -y
 CMD "my name is falguni"
 ENTRYPOINT echo
-MAINTAINER falguni
+MAINTAINER falguni thakur
 ADD./path of 1 file/2file
 EXPOSE 8080
 WORKDIR/
