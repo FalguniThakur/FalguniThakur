@@ -22,7 +22,7 @@ FROM ubuntu
 USER root
 RUN apt-get update
 RUN apt-get install apache2 -y
-CMD "my name is falguni"
+CMD "my name is falguni Thakur"
 ENTRYPOINT echo
 MAINTAINER falguni thakur
 ADD./path of 1 file/2file
